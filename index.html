@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./src/main.js" type="module" ></script>
+    <title>Document</title>
+</head>
+<body>
+    <section>
+
+        <nav>
+            <h1>Расчитайте дату или включите секундомер</h1>
+            <label for="cheked_date">
+                <input type="checkbox" id="cheked_date" class="cheked_date" value="false">
+                <span>Калькулятор дат</span>
+            </label>
+            <label for="cheked_timer">
+                <input type="checkbox" id="cheked_timer" class="cheked_timer" value="false">
+                <span>Таймер</span>
+            </label>
+        </nav>
+
+        <form id="datecalc" class="datecalc" style="display: none;">
+            <h3>Калькулятор дат</h3>
+            <label>
+                <strong>Первая дата:</strong>
+                <input type="date" name="ferstDate" />        
+             </label>
+            <label>
+                <strong>Вторая дата:</strong>
+                <input type="date" name="secondDate" />
+            </label>
+            <button type="submit">Расчитать промежуток</button>
+        </form>
+
+        <p id="datecalc__result" style="margin-top: 50px;">Date</p>
+
+        <form class="form__timers" style="display: none;">
+            <h2>Таймер</h2>
+            <input type="text" class="times_timer">
+            <div class="timer_button" >
+                <button class="timer__start_Button" style="display: none;">Старт</button>
+                <button class="timer__stop_Button">Стоп</button>
+                <button class="timer__reset_Button">Обновить</button>
+                
+            </div>
+        </form>
+    </section>
+
+</body>
+</html>
