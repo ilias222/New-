@@ -2,6 +2,10 @@ import { dateCalcResult, timesTimer } from "./constant.js";
 
 let visite = null;
 
+/**
+ * 
+ * @param {*} event 
+ */
 export function timeStopStart(event){
     event.preventDefault();
     if(event.target.className === 'timer__stop_Button'){
@@ -21,6 +25,9 @@ export function timeStopStart(event){
     }
 }
 
+/**
+ * 
+ */
 export function tik(){
     let timem = dateCalcResult.innerHTML;
     let timemm = timem.split(':');
@@ -28,9 +35,15 @@ export function tik(){
     let setSek = Number(timemm[1]);
     if(setMin >= 0 && setSek >= 0){
         calsTime(setMin, setSek);
-        // let loop = setTimeout(tik, 1000);
     }
 }
+
+/**
+ * 
+ * @param {*} mins 
+ * @param {*} sek 
+ * @returns 
+ */
 export function calsTime(mins, sek){
     if (sek > 0){
         sek--;
@@ -40,7 +53,7 @@ export function calsTime(mins, sek){
     }
     if(mins == 0 && sek == 0){
         let audio = new Audio(); 
-        audio.src = './publik/kessidi-dzyn.mp3'; 
+        audio.src = './publik/kessidi.mp3'; 
         audio.autoplay = true; 
     }
     return dateCalcResult.innerHTML = `${mins}:${sek}`

@@ -12,9 +12,11 @@ timesTimer.addEventListener('input', handleCalcTimesFormat);
 chekedDate.addEventListener('click', blockShadow);
 chekedTimer.addEventListener('click', blockShadow);
 
-require(["loadScript"], function({loadScript}){
-    loadScript('ilia');
-});
+// define(["loadScript"], function({loadScript}){
+//      loadScript('ilia');
+//  });
+
+export let timesTim = null;
 
 function handleCalcTimesFormat(event){
     event.preventDefault();
@@ -22,7 +24,8 @@ function handleCalcTimesFormat(event){
     if(timesFormat.test(time)){
         event.target.style = "color: black;"
         dateCalcResult.innerHTML = event.target.value;
-        let timesTim = setInterval(tik, 1000)
+        console.log(timesTim);
+        timesTim = setInterval(tik, 1000)
     } else {
         event.target.style = "color: red;"
         dateCalcResult.innerHTML = formatError('Необходимо задать время в формате 00:00');

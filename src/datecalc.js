@@ -18,3 +18,4 @@ export const diffToHTML = diff =>`
     ${diff.days ? 'Дней:' + diff.days : ''}
 </span>
 `;
+/** */

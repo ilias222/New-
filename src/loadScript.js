@@ -5,3 +5,5 @@ define(function(){
 
     return {loadScript};
 })
+
+module.exports = {define};
