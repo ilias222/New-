@@ -1,41 +1,36 @@
-import { timesFormat, dateCalcForm, dateCalcResult, startTimer, stopTimer, 
-    timesTimer, chekedDate, chekedTimer } from "./constant.js";
+import * as Constant from "./constant.js";
 import { diffDates, diffToHTML } from "./datecalc.js";
 import { blockShadow } from "./formSchadow.js";
 import { formatError } from "./utils.js";
 import { timeStopStart, tik } from "./TimerForm.js";
 
-dateCalcForm.addEventListener('submit', handleCalcDates);
-startTimer.addEventListener('click', timeStopStart);
-stopTimer.addEventListener('click', timeStopStart);
-timesTimer.addEventListener('input', handleCalcTimesFormat);
-chekedDate.addEventListener('click', blockShadow);
-chekedTimer.addEventListener('click', blockShadow);
-
-// define(["loadScript"], function({loadScript}){
-//      loadScript('ilia');
-//  });
+Constant.dateCalcForm.addEventListener('submit', handleCalcDates);
+Constant.startTimer.addEventListener('click', timeStopStart);
+Constant.stopTimer.addEventListener('click', timeStopStart);
+Constant.timesTimer.addEventListener('input', handleCalcTimesFormat);
+Constant.chekedDate.addEventListener('click', blockShadow);
+Constant.chekedTimer.addEventListener('click', blockShadow);
 
 export let timesTim = null;
 
 function handleCalcTimesFormat(event){
     event.preventDefault();
     let time = event.target.value;
-    if(timesFormat.test(time)){
+    if(Constant.timesFormat.test(time)){
         event.target.style = "color: black;"
-        dateCalcResult.innerHTML = event.target.value;
+        Constant.dateCalcResult.innerHTML = event.target.value;
         console.log(timesTim);
         timesTim = setInterval(tik, 1000)
     } else {
         event.target.style = "color: red;"
-        dateCalcResult.innerHTML = formatError('Необходимо задать время в формате 00:00');
+        Constant.dateCalcResult.innerHTML = formatError('Необходимо задать время в формате 00:00');
     }
 
 }
 
 function handleCalcDates(event) {
     event.preventDefault();
-    dateCalcResult.innerHTML = '';
+    Constant.dateCalcResult.innerHTML = '';
 
     let firstDate = event.target.elements[0];
     let secondDate = event.target.elements[1]
@@ -43,12 +38,10 @@ function handleCalcDates(event) {
     
     if(firstDate && secondDate) {
         const diff = diffDates(firstDate, secondDate); 
-        dateCalcResult.innerHTML = diffToHTML(diff);
+        Constant.dateCalcResult.innerHTML = diffToHTML(diff);
     }else
     {
-        dateCalcResult.innerHTML = formatError('Необходимо заполнить два поля, или выбрать таймер');
+        Constant.dateCalcResult.innerHTML = formatError('Необходимо заполнить два поля, или выбрать таймер');
                 }
-
-
     
 }
