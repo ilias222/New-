@@ -1,4 +1,5 @@
 export const timesFormat = /\d\d:[0-5][0-9]/
+
 export const dateCalcForm = document.getElementById("datecalc");
 export const timesCalcForm = document.querySelector(".form__timers");
 export const dateCalcResult = document.getElementById("datecalc__result");
