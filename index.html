@@ -4,48 +4,86 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="./src/main.js" type="module" ></script>
-    <title>Document</title>
-</head>
+    <title>Gallirey</title>
+<script defer src="http://localhost:8080/scripts/bild.js"></script><link href="http://localhost:8080/scripts/main.css" rel="stylesheet"><script defer src="http://localhost:8080/scripts/bild.js"></script><link href="http://localhost:8080/scripts/main.css" rel="stylesheet"></head>
 <body>
-    <section>
-
-        <nav>
-            <h1>Расчитайте дату или включите секундомер</h1>
-            <label for="cheked_date">
-                <input type="checkbox" id="cheked_date" class="cheked_date" value="false">
-                <span>Калькулятор дат</span>
-            </label>
-            <label for="cheked_timer">
-                <input type="checkbox" id="cheked_timer" class="cheked_timer" value="false">
-                <span>Таймер</span>
-            </label>
-        </nav>
-
-        <form id="datecalc" class="datecalc" style="display: none;">
-            <h3>Калькулятор дат</h3>
-            <label>
-                <strong>Первая дата:</strong>
-                <input type="date" name="ferstDate" />        
-             </label>
-            <label>
-                <strong>Вторая дата:</strong>
-                <input type="date" name="secondDate" />
-            </label>
-            <button type="submit">Расчитать промежуток</button>
-        </form>
-
-        <p id="datecalc__result" style="margin-top: 50px;">Date</p>
-
-        <form class="form__timers" style="display: none;">
-            <h2>Таймер</h2>
-            <input type="text" class="times_timer">
-            <div class="timer_button" >
-                <button class="timer__start_Button" style="display: none;">Старт</button>
-                <button class="timer__stop_Button">Стоп</button>
+    <h1 class="border">Галлирея</h1>
+    <section class="box-grid">
+        <div class="box-grid-item">
+            <img class="image1" src="./files/image1.jpg">
+            <div class="title1">
+                <p class="title-item">
+                    Заголовок 1
+                </p>
             </div>
-        </form>
-    </section>
+        </div>
+        <div class="box-grid-item box-grid-item1">
+            <img class="image2" src="./files/image2.jpg">
+            <div class="title2">
+                <p class="title-item">
+                    Заголовок 2
+                </p>
+            </div>
+        </div>
+        <div class="box-grid-item">
+            <img class="image3" src="./files/image3.jpg">
+            <div class="title3">
+                <p class="title-item">
+                    Заголовок 3
+                </p>
+            </div>
+        </div>
 
+        <div class="box-grid-item5">
+            <img class="image5" src="./files/image5.jpg">
+            <div class="title4">
+                <p class="title-item">
+                    Заголовок 4
+                </p>
+            </div>
+        </div>
+        <div class="box-grid-item box-grid-item2">
+            <img class="image4" src="./files/image4.jpg">  
+            <div class="title5">
+                <p class="title-item">
+                    Заголовок 5
+                </p>
+            </div>  
+        </div>
+        <div class="box-grid-item6">
+            <img class="image6" src="./files/image6.jpg">
+            <div class="title6">
+                <p class="title-item">
+                    Заголовок 6
+                </p>
+            </div>
+        </div>
+
+        <div class="box-grid-item7">
+            <audio controls src="./files/music1.mp3"></audio>
+            <div class="title7">
+                <p class="title-item">
+                    Заголовок 7
+                </p>
+            </div>
+        </div>
+        <div class="box-grid-item8">
+            <audio controls src="./files/music2.mp3"></audio>
+            <div class="title8">
+                <p class="title-item">
+                    Заголовок 8
+                </p>
+            </div>
+        </div>
+
+        <div class="box-grid-item box-grid-item3">
+            <video controls src="./files/video.mp4" 
+            poster="./files/promo.jpg"></video>
+            <div class="title9">
+                <p class="title-item">
+                    Заголовок 9
+                </p>
+            </div>
+        </div>
 </body>
 </html>

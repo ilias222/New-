@@ -1,0 +1,12 @@
+import "./styles/master.css";
+import './styles/master.scss';
+import './files/image1.jpg';
+import './files/image2.jpg';
+import './files/image3.jpg';
+import './files/image4.jpg';
+import './files/image5.jpg';
+import './files/image6.jpg';
+import './files/music1.mp3';
+import './files/music2.mp3';
+import './files/video.mp4';
+import './files/promo.jpg';
